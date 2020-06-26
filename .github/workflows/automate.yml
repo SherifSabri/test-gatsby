@@ -18,3 +18,7 @@ jobs:
         run: |
           pwd
           ls
+      - name: Install Gatsby
+        run: npm install
+      - name: Build Gatsby
+        run: npm run build
