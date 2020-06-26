@@ -8,9 +8,13 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo a String
-        run: echo "Hello World!"
-      - name: Multi-Line Script
+      - name: List Before Checkout
         run: |
-          node -v
-          npm -v
+          pwd
+          ls
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: List After Checkout
+        run: |
+          pwd
+          ls
